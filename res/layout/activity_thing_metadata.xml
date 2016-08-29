@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/activity_background"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <LinearLayout
+        android:id="@+id/WhatContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacer"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:weightSum="1" >
+	    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal" >
+		    
+		    <TextView
+		        android:id="@+id/WhatListHeader"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/header_what_list"
+		        android:padding="@dimen/spacer"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/theme_lite" />
+
+		    <ImageButton
+		        android:id="@+id/addWhat"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:background="@color/tinted"
+		        android:contentDescription="@string/button_add_what"
+		        android:onClick="addWhat"
+		        android:src="@drawable/button_add_small" />
+
+		</LinearLayout>
+		
+	    <ListView
+	        android:id="@+id/WhatsListView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/layout_background"
+	        android:padding="@dimen/layout_padding" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/WhyContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacer"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:weightSum="1" >
+	    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal" >
+		    
+		    <TextView
+		        android:id="@+id/WhyListHeader"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/header_why_list"
+		        android:padding="@dimen/spacer"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/theme_lite" />
+
+		    <ImageButton
+		        android:id="@+id/addWhy"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:background="@color/tinted"
+		        android:contentDescription="@string/button_add_why"
+		        android:onClick="addWhy"
+		        android:src="@drawable/button_add_small" />
+
+		</LinearLayout>
+		
+	    <ListView
+	        android:id="@+id/WhysListView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/layout_background"
+	        android:padding="@dimen/layout_padding" />
+
+    </LinearLayout>
+
+</LinearLayout>

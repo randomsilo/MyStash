@@ -1,0 +1,156 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbarAlwaysDrawVerticalTrack="false"
+    android:scrollbars="vertical"
+    tools:context="${relativePackage}.${activityClass}" >
+
+	    <TextView
+	            android:id="@+id/SettingsHeader"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/header_settings"
+	            android:textAppearance="?android:attr/textAppearanceLarge"
+	            android:textColor="@color/theme_lite" />
+
+        <LinearLayout
+            android:id="@+id/DbExportContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacer"
+            android:background="@color/layout_background"
+            android:gravity="top"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/DbExportBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".4"
+                android:onClick="databaseExport"
+                android:text="@string/button_database_export" />
+
+            <TextView
+                android:id="@+id/DbExportBtnInstructions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".6"
+                android:padding="@dimen/spacer"
+                android:text="@string/instructions_database_export"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/common_text" />
+
+        </LinearLayout>
+
+     
+        <LinearLayout
+            android:id="@+id/DbImportContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacer"
+            android:background="@color/layout_background"
+            android:gravity="top"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/DbImportBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".4"
+                android:onClick="databaseImport"
+                android:text="@string/button_database_import" />
+
+            <TextView
+                android:id="@+id/DbImportBtnInstructions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight=".6"
+                android:padding="@dimen/spacer"
+                android:text="@string/instructions_database_import"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/common_text" />
+
+        </LinearLayout>
+   
+        <LinearLayout
+	        android:id="@+id/DbClearContainer"
+	        android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacer"
+            android:background="@color/layout_background"
+            android:gravity="top"
+            android:orientation="horizontal" >
+	
+	        <Button
+	            android:id="@+id/DbClearBtn"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight=".4"
+	            android:onClick="databaseClear"
+	            android:text="@string/button_database_clear" />
+	
+	        <TextView
+	            android:id="@+id/DbClearBtnInstructions"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight=".6"
+	            android:padding="@dimen/spacer"
+	            android:text="@string/instructions_database_clear"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textColor="@color/common_text" />
+
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:id="@+id/DbSampleContainer"
+	        android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacer"
+            android:background="@color/layout_background"
+            android:gravity="top"
+            android:orientation="horizontal" >
+	
+	        <Button
+	            android:id="@+id/DbSampleBtn"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight=".4"
+	            android:onClick="databaseLoadSample"
+	            android:text="@string/button_database_sample" />
+	
+	        <TextView
+	            android:id="@+id/DbSampleBtnInstructions"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_weight=".6"
+	            android:padding="@dimen/spacer"
+	            android:text="@string/instructions_database_sample"
+	            android:textAppearance="?android:attr/textAppearanceMedium"
+	            android:textColor="@color/common_text" />
+
+	    </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/SetupBtnProgress"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="5dip"
+            android:visibility="gone" />
+
+</LinearLayout>

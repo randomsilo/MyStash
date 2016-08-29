@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.randomsilo.mystash"
+    android:versionCode="3"
+    android:versionName="1.0.0.2" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/MyStash" >
+        <receiver android:name=".receiver.AutoStartReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.BootService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".BrowseActivity"
+            android:icon="@drawable/hierarchy"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ThingDetailsActivity"
+            android:icon="@drawable/details"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ThingImagesActivity"
+            android:icon="@drawable/image"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ThingPropertiesActivity"
+            android:icon="@drawable/property"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ThingLocationActivity"
+            android:icon="@drawable/location"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+        </activity>
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LandingActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:icon="@drawable/settings"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ThingResourceActivity"
+            android:icon="@drawable/resource"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ThingScheduleActivity"
+            android:icon="@drawable/schedule"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name=".ThingMetadataActivity"
+            android:icon="@drawable/metadata"
+            android:windowSoftInputMode="stateUnspecified|adjustPan" >
+        </activity>
+        <activity
+            android:name=".EditListActivity"
+            android:icon="@drawable/list"
+            android:label="@string/title_activity_edit_list" >
+        </activity>
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/title_activity_notification" >
+        </activity>
+        <activity
+            android:name=".SearchSelectionActivity"
+            android:label="@string/title_activity_search_selection" >
+        </activity>
+        <activity
+            android:name=".SimpleSearchActivity"
+            android:label="@string/title_activity_simple_search" >
+        </activity>
+        <activity
+            android:name=".MetaSearchActivity"
+            android:label="@string/title_activity_meta_search" >
+        </activity>
+        <activity
+            android:name=".ResourceSearchActivity"
+            android:label="@string/title_activity_resource_search" >
+        </activity>
+    </application>
+
+</manifest>

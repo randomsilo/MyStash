@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AppFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/ButtonBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/TakePictureBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:background="@color/tinted"
+            android:contentDescription="@string/button_take_picture"
+            android:onClick="takePicture"
+            android:src="@drawable/button_image_small" />
+        
+        <ImageButton
+            android:id="@+id/ClearPictureBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:background="@color/tinted"
+            android:contentDescription="@string/button_clear_picture"
+            android:onClick="clearPicture"
+            android:src="@drawable/button_remove_small" />
+        
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ItemImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_margin="@dimen/thing_image_margin"
+        android:background="@drawable/image_border"
+        android:contentDescription="@string/content_description_item_picture" />
+
+</LinearLayout>

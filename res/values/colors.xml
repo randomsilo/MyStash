@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theme_main">#669900</color>
+    <color name="theme_dark">#334d00</color> <!--  HSV, V -30 -->
+    <color name="theme_lite">#99e600</color> <!--  HSV, V +30 -->
+    <color name="common_text">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="layout_background">#7F000000</color>
+    <color name="layout_background_blacker">#CF000000</color>
+    <color name="tinted">#05000000</color>
+</resources>

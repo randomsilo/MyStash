@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <TextView
+	        android:id="@+id/PropertyTag"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/empty_name"
+	        android:textSize="@dimen/list_text_size"
+	        android:textColor="@color/theme_lite" >
+	    </TextView>
+	    <TextView
+	        android:id="@+id/PropertyDescription"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/PropertyTag"
+	        android:text="@string/empty_description"
+	        android:textSize="@dimen/label_text_size"
+	        android:textColor="@color/common_text"
+	        android:visibility="gone" >
+	    </TextView>
+	    <TextView
+	        android:id="@+id/PropertyId"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/PropertyDescription"
+	        android:text="@string/empty_id"
+	        android:textSize="@dimen/label_text_size"
+	        android:textColor="@color/common_text"
+	        android:visibility="gone" >
+	    </TextView>
+</RelativeLayout> 

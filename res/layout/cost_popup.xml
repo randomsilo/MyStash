@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/background_light"
+    android:id="@+id/CostPopup"
+    android:orientation="vertical" xmlns:tools="http://schemas.android.com/tools" tools:ignore="UselessParent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:background="@android:color/black"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/TotalCostHeader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/popup_total_cost_title"
+                android:textColor="@color/theme_lite"
+                android:textSize="@dimen/label_text_size" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ThingName"
+                android:paddingBottom="20dp"
+                android:textColor="@color/common_text"/>
+            
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TotalActualCostLabel"
+                android:textColor="@color/theme_lite"
+                android:text="@string/popup_total_actual_cost" />
+            
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TotalActualCost"
+                android:textColor="@color/common_text"/>
+            
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/TotalReplacementCostLabel"
+                android:textColor="@color/theme_lite"
+                android:text="@string/popup_total_replacement_cost" />
+            
+            <TextView
+                android:id="@+id/TotalReplacementCost"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/common_text" />
+
+            <Button
+                android:id="@+id/dismiss"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_back_btn" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

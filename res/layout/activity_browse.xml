@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="${relativePackage}.${activityClass}" >
+    
+    <LinearLayout
+	    android:id="@+id/BelongsToContainer"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="@dimen/spacer"
+	    android:gravity="top"
+	    android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal" >
+        
+	        <TextView
+	            android:id="@+id/ItemBelongsToHeader"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:padding="@dimen/spacer"
+	            android:text="@string/header_item_belongs_to"
+	            android:textAppearance="?android:attr/textAppearanceLarge"
+	            android:textColor="@color/theme_lite" />
+
+	        <ImageButton
+	            android:id="@+id/changeParent"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_marginLeft="30dp"
+	            android:background="@color/tinted"
+	            android:contentDescription="@string/button_change_parent"
+	            android:onClick="changeParent"
+	            android:padding="5dp"
+	            android:src="@drawable/button_hierarchy_small" />
+	        
+	        <ImageButton
+	            android:id="@+id/costDetails"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:layout_marginLeft="30dp"
+	            android:background="@color/tinted"
+	            android:contentDescription="@string/button_cost_details"
+	            android:onClick="costDetails"
+	            android:padding="5dp"
+	            android:src="@drawable/button_dollar_small" />
+
+		</LinearLayout>
+        
+        <TextView
+	        android:id="@+id/ItemBelongsTo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:padding="@dimen/spacer"
+	        android:textColor="@color/common_text" />
+        
+	    
+    </LinearLayout>
+	    
+    <LinearLayout
+	    android:id="@+id/ChildrenContainer"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="@dimen/spacer"
+	    android:gravity="top"
+	    android:orientation="vertical" >
+	    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="horizontal" >
+		    
+		    <TextView
+		        android:id="@+id/ChildrenListHeader"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/header_children_list"
+		        android:padding="@dimen/spacer"
+		        android:textAppearance="?android:attr/textAppearanceLarge"
+		        android:textColor="@color/theme_lite" />
+
+		    <ImageButton
+		        android:id="@+id/addThing"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:background="@color/tinted"
+		        android:contentDescription="@string/button_add_thing"
+		        android:onClick="addThing"
+		        android:src="@drawable/button_add_small" />
+
+		</LinearLayout>
+		
+	    <ListView
+	        android:id="@+id/ThingListView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/layout_background"
+	        android:padding="@dimen/layout_padding" />
+
+    </LinearLayout>
+    
+</LinearLayout>

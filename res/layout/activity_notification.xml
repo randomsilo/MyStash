@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:background="@drawable/activity_background"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <LinearLayout
+        android:id="@+id/SearchContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/spacer"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="vertical"
+        tools:ignore="UselessParent" >
+        
+        <TextView
+	        android:id="@+id/ExpiresInHeader"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/header_expires_in"
+	        android:padding="@dimen/spacer"
+	        android:labelFor="@+id/DaysBeforeExpire"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textColor="@color/theme_lite" />
+
+        <EditText
+            android:id="@+id/DaysBeforeExpire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textColor="@color/common_text"
+            android:textSize="@dimen/field_text_size"
+            android:text="@string/days_before_expired"
+            android:background="@color/layout_background"
+	        android:padding="@dimen/layout_padding">
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/GetExpiringBtn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="GetExpiring"
+            android:text="@string/expiring_btn" />
+            
+        <TextView
+	        android:id="@+id/ExpiringListHeader"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/header_expiring_list"
+	        android:padding="@dimen/spacer"
+	        android:textAppearance="?android:attr/textAppearanceLarge"
+	        android:textColor="@color/theme_lite" />
+        
+        <ListView
+	        android:id="@+id/ExpiringListView"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@color/layout_background"
+	        android:padding="@dimen/layout_padding" />
+        
+   </LinearLayout>
+
+</LinearLayout>
